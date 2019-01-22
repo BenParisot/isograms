@@ -2,9 +2,10 @@ function add(a, b) {
     return a + b;
 }
 
+
 function isIsogram(){
-    var array = "create".split('');
-    var word = "create";
+    var word = document.getElementById('word').value; 
+    var array = word.split('');
     console.log(array);
     // console.log(word);
 
@@ -42,11 +43,19 @@ function isIsogram(){
     
     var sum = total.reduce(add, 0);
 
+
     if (sum === array.length) {
         console.log("that's an isogram");
-    }
-    else (console.log("not an isogram"));
+        var resultsYes = document.getElementById('results');
+        resultsYes.innerHTML = 'Yes, that is an isogram!';
 
+
+    }
+    if (sum !== array.length) {
+
+         var resultsNo = document.getElementById('results');
+        resultsNo.innerHTML = 'No, that is not an isogram!';
+    }
     //get string input from user
     //test it using isIsogram function
     //display yes or no on screen to user
@@ -56,4 +65,4 @@ function isIsogram(){
 
 }
 
-isIsogram();
+// isIsogram();
