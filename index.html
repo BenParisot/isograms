@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
+
     <title>Isogram Test</title>
 </head>
 <body>
-    <p>
-        <label>
-            Enter a word to test if it is an isogram.
-            <input id="word">
-        </label>
-    </p>
-    <p>
-        <button onclick="isIsogram()">Test It!</button>
-    </p>
-    <p id="results">   
-    </p>
+    <header>
+        <p>Welcome to Madame Ophelia's</p>
+        <h1>Isogram Test!</h1>
+    </header>
+    <main>
+        <p>An isogram (also known as a "nonpattern word") is a logological term for a word or phrase without a repeating letter. Madame Ophelia is the world's most mystical, magical isogram detector. Submit unto her your favorite word and she shall tell you if it is an isogram or not. </p>
+        <p>
+            <label>
+                Enter a word:
+                <input id="word">
+            </label>
+        </p>
+        <p>
+            <button onclick="isIsogram()">Offer Up Your Word!</button>
+        </p>
+        <p id="results">   
+        </p>
+    </main> 
+    <footer></footer>
     <script src="main.js"></script>
 </body>
 </html>
