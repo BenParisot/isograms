@@ -57,7 +57,4 @@ function isIsogram(){
     }
 }
 
-function clearField() {
-    location.reload();
-}
 
