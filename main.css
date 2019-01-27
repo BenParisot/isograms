@@ -1,7 +1,9 @@
 body {
     font-family: 'Major Mono Display', monospace;
-    font-size: 18px;
+    font-size: 22px;
     color: #2E3D48;
+    text-align: center;
+    padding: 25px 55px;
 }
 
 .blinking-cursor {
@@ -60,3 +62,34 @@ body {
       color: black;
     }
   }
+
+  h1 {
+    font-size: 122px;
+    line-height: .25;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  button {
+    padding: 15px 45px;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 22px;
+    background-color: lightpink;
+    border: none;
+  }
+  
+  button:hover {
+    padding: 15px 45px;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 22px;
+    background-color: lightcoral;
+    border: none;
+  }
+
+  #results {
+      font-size: 36px;
+      color: lightpink;
+  }
+

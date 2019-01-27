@@ -1,31 +1,10 @@
 function add(a, b) {
     return a + b;
 }
+
 var x = 0;
 var i = 0;
-var welcome = 'Welcome. I am an Automated Isogram Test. An isogram, also known as a nonpattern word, is a logological term for a word or phrase without a repeating letter. Enter your favorite word and I will tell you if it is an isogram or not. ';
-var results = '';
-var blinkingCursor = ' | ';
 var speed = 50;
-
-
-function start() {
-  if (i < welcome.length) {
-    document.getElementById("welcome").innerHTML += welcome.charAt(i);
-    i++;
-    setTimeout(start, speed);
-  }
-
-  if (i === welcome.length) {
-    document.getElementById("blinking-cursor").innerHTML = blinkingCursor;
-    }
-  
-
-}
-
-
-
-
 
 function isIsogram(){    
     var word = document.getElementById('word').value; 
@@ -39,8 +18,6 @@ function isIsogram(){
     }
      
     var sum = total.reduce(add, 0);
-
-
 
     if (sum === wordArray.length) {
         var resultsYes = 'Yes, ' + word + ' is an isogram.';
@@ -66,4 +43,5 @@ function isIsogram(){
         }
         resultsTypeNo();
     }
+    document.getElementById('results').value = '';
 }
