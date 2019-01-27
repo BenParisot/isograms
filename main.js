@@ -1,13 +1,11 @@
 function add(a, b) {
     return a + b;
 }
-
+var x = 0;
 var i = 0;
-var welcome = 'Welcome. I am an Automated Isogram Test. ';
-var definition = 'An isogram (also known as a "nonpattern word") is a logological term for a word or phrase without a repeating letter. ';
-var offer = 'Enter your favorite word and I will tell you if it is an isogram or not. ';
+var welcome = 'Welcome. I am an Automated Isogram Test. An isogram, also known as a nonpattern word, is a logological term for a word or phrase without a repeating letter. Enter your favorite word and I will tell you if it is an isogram or not. ';
 var results = '';
-// var blinkingCursor = ' | ';
+var blinkingCursor = ' | ';
 var speed = 50;
 
 
@@ -18,21 +16,11 @@ function start() {
     setTimeout(start, speed);
   }
 
-  if (i < definition.length) {
-    document.getElementById("definition").innerHTML += definition.charAt(i);
-    i++;
-    setTimeout(start, speed);
-  }
-
-  if (i < offer.length) {
-    document.getElementById("offer").innerHTML += offer.charAt(i);
-    i++;
-    setTimeout(start, speed);
-  }
+  if (i === welcome.length) {
+    document.getElementById("blinking-cursor").innerHTML = blinkingCursor;
+    }
   
-//   if (i === welcome.length) {
-//   document.getElementById("blinking-cursor").innerHTML = blinkingCursor;
-//   }
+
 }
 
 
@@ -52,13 +40,30 @@ function isIsogram(){
      
     var sum = total.reduce(add, 0);
 
+
+
     if (sum === wordArray.length) {
-        var resultsYes = document.getElementById('results');
-        resultsYes.innerHTML = 'Yes, that is an isogram!';
-    }
+        var resultsYes = 'Yes, ' + word + ' is an isogram.';
+        function resultsTypeYes() {
+            if (x < resultsYes.length) {
+                document.getElementById("results").innerHTML += resultsYes.charAt(x);
+                x++;
+                setTimeout(resultsTypeYes, speed);
+            }      
+        }
+        resultsTypeYes();
+    }   
+
 
     if (sum !== wordArray.length) {
-        var resultsNo = document.getElementById('results');
-        resultsNo.innerHTML = 'No, that is not an isogram!';
+        var resultsNo = 'No, ' + word + ' is not an isogram.';
+        function resultsTypeNo() {
+            if (x < resultsNo.length) {
+                document.getElementById("results").innerHTML += resultsNo.charAt(x);
+                x++;
+                setTimeout(resultsTypeNo, speed);
+            }      
+        }
+        resultsTypeNo();
     }
 }
