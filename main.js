@@ -2,14 +2,16 @@ function add(a, b) {
     return a + b;
 }
 
-var x = 0;
-var i = 0;
-var speed = 50;
 
-function isIsogram(){   
+
+function isIsogram(){
+    document.getElementById('results').innerHTML = '';   
     var word = document.getElementById('word').value; 
     var wordArray = word.split('');
     var total = [];
+    var x = 0;
+    var i = 0;
+    var speed = 50;
     
     for (var i = 0; i < wordArray.length; i++) {
         var re = new RegExp(wordArray[i], 'g');
@@ -21,6 +23,10 @@ function isIsogram(){
 
     if (sum === wordArray.length) {
         var resultsYes = 'Yes, ' + word + ' is an isogram.';
+        console.log(word, wordArray, total, sum, resultsYes);
+        console.log(resultsYes.length);
+        console.log(x);
+
         function resultsTypeYes() {
             if (x < resultsYes.length) {
                 document.getElementById("results").innerHTML += resultsYes.charAt(x);
@@ -43,7 +49,7 @@ function isIsogram(){
                 x++;
                 setTimeout(resultsTypeNo, speed);
             }  
-            if (i === txt.length) {
+            if (i === resultsNo.length) {
                 document.getElementById("blinking-cursor").innerHTML = ' | ';
                 }     
         }
@@ -54,3 +60,4 @@ function isIsogram(){
 function clearField() {
     location.reload();
 }
+
