@@ -1,34 +1,62 @@
 body {
-    background-image: url("img/ophelia.jpg");
-    height: 100%;
-}
-
-header {
-    font-family: 'Cinzel', serif;
-    color: lightcoral;
-    font-size: 48px;
-    text-align: center;
-}
-
-h1 {
-    line-height: 25px;
-}
-
-main {
-    font-family: 'Raleway', sans-serif;
-    background-color: rgba(240, 128, 128, 0.65);
-    text-align: center; 
+    font-family: 'Major Mono Display', monospace;
     font-size: 18px;
-    padding: 25px 50px;
-    color: lightcyan;
+    color: #2E3D48;
 }
 
-footer {
-    background-color: grey;
-    font-family: 'Raleway', sans-serif;
-
-}
-
-#button-enter {
-    color: red;
-}
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 18px;
+    color: #2E3D48;
+    font-family: 'Major Mono Display', monospace;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-webkit-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-ms-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
+  
+  @-o-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: black;
+    }
+  }
